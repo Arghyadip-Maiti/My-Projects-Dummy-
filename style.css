@@ -1,0 +1,427 @@
+/* --- Global Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1e1e1e; /* Dark editor background */
+    color: #d4d4d4; /* Light text */
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll from animations */
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 0;
+    /* background-color: rgba(255, 255, 255, 0.2); */
+}
+
+section {
+    padding: 6rem 0;
+    position: relative; /* Needed for z-index context */
+    overflow: hidden; /* Clip content for animations */
+}
+.warcry{
+    background-color: #1e1e1e ;
+    text-align: center;
+    padding-left: 120px;
+}
+.section-title {
+    font-family: 'Fira Code', monospace;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #c586c0; /* Purple accent */
+}
+.hero-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #8a8a8e; /* Mid-tone text */
+    max-width: 60ch;
+    margin: 0 auto 3rem auto;
+}
+
+/* --- Header & Navigation --- */
+.main-header {
+    background: rgba(30, 30, 30, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    border-bottom: 1px solid rgba(212, 212, 212, 0.1); /* Subtle border */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: #d4d4d4; /* Light text */
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 2.5rem;
+}
+
+nav a {
+    color: #8a8a8e; /* Mid-tone text */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover, .logo:hover {
+    color: #34d399; /* Green accent on hover */
+}
+
+/* --- Hero Section with Video Background --- */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    color: #d4d4d4; /* Light text for hero content */
+    z-index: 1; /* Ensure content is above overlay */
+}
+
+#hero-video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -2; /* Behind the overlay */
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 30, 30, 0.7); /* Dark overlay for text readability */
+    z-index: -1; /* Between video and content */
+}
+
+.hero-content {
+    animation: fadeInSlideUp 1s ease-out forwards;
+    position: relative; /* Ensure it stays above overlay */
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-family: 'Fira Code', monospace;
+    font-size: 3.8rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: rgba(212, 212, 212, 0.9); /* Slightly muted light text */
+    margin-bottom: 2rem;
+    max-width: 60ch;
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    background: #34d399; /* Green accent */
+    border: 2px solid #34d399; /* Green accent */
+    color: #1e1e1e; /* Dark text on button */
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Fira Code', monospace;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: transparent;
+    color: #34d399; /* Green accent on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(52, 211, 153, 0.3); /* Subtle shadow on hover */
+}
+
+/* --- About Section --- */
+.about-section {
+    background-color: #2a2a2e; /* Darker surface color */
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Image on left, text on right */
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.about-image-main img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.about-text-main h3 {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.8rem;
+    color: #c586c0; /* Purple accent */
+    margin-bottom: 1rem;
+}
+
+.about-text-main p {
+    font-size: 1rem;
+    color: #d4d4d4; /* Light text */
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+
+/* --- Principles Cards --- */
+.principles-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 36px;
+    margin-top: 36px;
+}
+
+.card {
+    background: #1e1e1e; /* Dark editor background */
+    border: 1px solid rgba(212, 212, 212, 0.1); /* Subtle border */
+    border-radius: 8px;
+    text-align: center;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: #34d399; /* Green accent on hover */
+}
+
+.card-image-wrapper {
+    width: 100%;
+    height: 160px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    background-color: #111111; /* Even darker for image background */
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease; /* Image zoom on hover */
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card h3 {
+    font-family: 'Fira Code', monospace;
+    color: #d4d4d4; /* Light text */
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #8a8a8e; /* Mid-tone text */
+}
+
+/* --- Join Us Form Section --- */
+.join-section {
+    background-color: #111111; /* Very dark section */
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input {
+    background: #2a2a2e; /* Darker surface color */
+    border: 1px solid rgba(212, 212, 212, 0.1); /* Subtle border */
+    color: #d4d4d4; /* Light text */
+    padding: 1rem;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.contact-form input::placeholder {
+    color: #8a8a8e; /* Mid-tone text */
+}
+
+.contact-form input:focus {
+    outline: none;
+    border-color: #34d399; /* Green accent on focus */
+    box-shadow: 0 0 10px rgba(52, 211, 153, 0.3);
+}
+
+/* --- Footer --- */
+
+
+
+
+.main-footer {
+    background: #0a0a0a;
+    padding: 4rem 0 2rem 0;
+    border-top: 1px solid rgba(212, 212, 212, 0.1);
+}
+
+.footer-content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-column p {
+    color: #8a8a8e;
+    font-size: 0.9rem;
+    max-width: 30ch;
+}
+
+.footer-logo {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #d4d4d4;
+    margin-bottom: 1rem;
+}
+
+.footer-heading {
+    font-family: 'Fira Code', monospace;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #d4d4d4;
+    margin-bottom: 1rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: #8a8a8e;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #34d399;
+}
+
+.footer-column .fas, .footer-column .fab {
+    margin-right: 0.75rem;
+    color: #34d399;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1.25rem;
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    color: #8a8a8e;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #34d399;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(212, 212, 212, 0.1);
+}
+
+.footer-bottom p {
+    color: #8a8a8e;
+    font-size: 0.9rem;
+}
+
+/* --- CSS Animations --- */
+@keyframes fadeInSlideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7); }
+    70% { transform: scale(1.03); box-shadow: 0 0 0 15px rgba(52, 211, 153, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+}
+.pulse { animation: pulse 2s infinite cubic-bezier(0.66, 0, 0.34, 1); }
+
+/* Text wave effect */
+.text-wave {
+    animation: textWave 3s infinite ease-in-out;
+    display: inline-block; /* Essential for span animation */
+    /* Add properties for individual letters if needed for more complex wave */
+}
+
+@keyframes textWave {
+    0%, 100% { text-shadow: 0 0 10px rgba(52, 211, 153, 0.5), 0 0 20px rgba(197, 134, 192, 0.3); }
+    50% { text-shadow: 0 0 15px rgba(52, 211, 153, 0.8), 0 0 30px rgba(197, 134, 192, 0.5); }
+}
+
+/* Fade-in for subsequent sections */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
