@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Open Source × GSoC Club</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1e1e1e;
+      color: #e0ffe0;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      color: #00ff88;
+      border-bottom: 3px solid #00ff88;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+      letter-spacing: 1px;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      animation: fadeInUp 1.2s ease-out;
+    }
+
+    .projects-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 3rem 2rem;
+    }
+
+    .project-card {
+      background-color: #2a2a2a;
+      width: 320px;
+      padding: 2rem;
+      border-radius: 15px;
+      transition: transform 0.3s ease, border 0.3s ease;
+      box-shadow: 0 0 10px rgba(0, 255, 136, 0.1);
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      border: 2px solid #00ff88;
+    }
+
+    .project-card h2 {
+      color: #00ff88;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .project-card p {
+      line-height: 1.6;
+      color: #d0ffd0;
+      font-size: 1rem;
+    }
+
+    .cta {
+      text-align: center;
+      padding: 2rem;
+      font-size: 1.1rem;
+      background-color: #2a2a2a;
+      margin: 2rem auto;
+      max-width: 700px;
+      border-radius: 12px;
+      transition: border 0.3s ease;
+    }
+
+    .cta:hover {
+      border: 2px solid #00ff88;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Our Projects</h1>
+  </header>
+
+  <div class="intro">
+    <p>The <strong>Open Source × GSoC Club</strong> thrives on impactful projects that solve real-world problems. From student-led initiatives to GSoC contributions, our members build tools that empower communities, improve workflows, and push the boundaries of open collaboration.</p>
+  </div>
+
+  <div class="projects-grid">
+    <div class="project-card">
+      <div class="codehealth"><img src="https://quintagroup.com/services/service-images/sentry-code-health-check.jpg" height="200px" width="320px"></div>
+      <h2>CodeHealth Tracker</h2>
+      <p>A privacy-first health monitoring app built with open standards. Tracks medicine intake, hydration, and daily routines. Developed during our Spring Hackathon.</p>
+    </div>
+
+    <div class="project-card">
+      <div class="devsync"><img src="https://media.licdn.com/dms/image/v2/D4D22AQHtv7_GCoHWsw/feedshare-shrink_800/B4DZer3eenH4Ag-/0/1750935136716?e=2147483647&v=beta&t=QiNuyFzszJEPGcKtDty1zwNWCF9vVrczHts0wInrpWA" height="200px" width="320px"></div>
+      <h2>DevSync</h2>
+      <p>A collaborative coding platform that syncs real-time edits across devices. Designed for remote teams and open source contributors. GSoC 2025 finalist project.</p>
+    </div>
+
+    <div class="project-card">
+       <div class="greendocs"><img src="https://images.squarespace-cdn.com/content/v1/61e7efa5b3b88001cd6ad066/8a899d22-150f-48ce-985d-e9450ed54707/Greendocs-sharing-image.jpg" height="200px" width="320px"></div>
+      <h2>GreenDocs</h2>
+      <p>An eco-friendly documentation generator that reduces redundant code and promotes clean architecture. Used by multiple student-led startups.</p>
+    </div>
+
+    <div class="project-card">
+      <div class="openvote"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvuCReKaXlOnYiikArgIStf_l12t6nZVTz9g&s" height="200px" width="320px"></div>
+      <h2>OpenVote</h2>
+      <p>A decentralized voting system for campus elections. Built with blockchain APIs and audited by community contributors. Featured in our Innovation Showcase.</p>
+    </div>
+  </div>
+
+  <div class="cta">
+    <p>Want to contribute or showcase your own project? Join our club, attend our ideathons, and collaborate with mentors to bring your ideas to life. Every line of code counts!</p>
+  </div>
+
+  <footer>
+    &copy; 2025 Open Source × GSoC Club | Projects Subpage
+  </footer>
+</body>
+</html>

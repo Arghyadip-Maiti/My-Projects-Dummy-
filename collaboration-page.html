@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Collaboration | Open Source × GSoC</title>
+  <style>
+    /* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+}
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+header h1 {
+  font-size: 2.5rem;
+  color: #00bcd4;
+  animation: fadeInUp 1s ease;
+}
+header p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-top: 10px;
+}
+
+/* Sections */
+section {
+  margin-bottom: 40px;
+}
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ff9800;
+}
+section p {
+  font-size: 1rem;
+  color: #ddd;
+}
+
+/* Lists */
+.goals-list, .impact-list {
+  list-style: none;
+  padding-left: 0;
+}
+.goals-list li, .impact-list li {
+  background-color: #2a2a2a;
+  margin: 10px 0;
+  padding: 12px 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.goals-list li:hover, .impact-list li:hover {
+  background-color: #333;
+  transform: translateX(5px);
+  border: #29732b solid 1px;
+}
+
+/* Cards */
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.card {
+  background-color: #2a2a2a;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 250px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  border: #29732b solid 1px;
+}
+.card h3 {
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+.card p {
+  color: #ccc;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  color: #888;
+  border-top: 1px solid #333;
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeInUp 1s ease;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="fade-in">
+      <h1>🤝 Collaboration: Open Source × GSoC Club</h1>
+      <p>Uniting innovation, mentorship, and global impact through open source contributions</p>
+    </header>
+
+    <section class="fade-in">
+      <h2>About the Collaboration</h2>
+      <p>This partnership brings together the Open Source Club and the GSoC Club to create a unified platform for students to learn, contribute, and grow. Through shared resources, mentorship, and events, we aim to build a sustainable open source ecosystem.</p>
+    </section>
+
+    <section class="fade-in">
+      <h2>Joint Goals</h2>
+      <ul class="goals-list">
+        <li>🌍 Connect students with global open source communities</li>
+        <li>🧠 Share mentorship and technical guidance across clubs</li>
+        <li>🚀 Launch collaborative projects with real-world impact</li>
+        <li>📚 Host proposal writing and contribution workshops</li>
+        <li>🎓 Prepare students for GSoC and beyond</li>
+      </ul>
+    </section>
+
+    <section class="fade-in">
+      <h2>Collaborative Initiatives</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Hack Together</h3>
+          <p>Joint hackathons focused on contributing to GSoC orgs and open source tools.</p>
+        </div>
+        <div class="card">
+          <h3>Mentor Exchange</h3>
+          <p>Cross-club mentorship sessions with GSoC alumni and open source leads.</p>
+        </div>
+        <div class="card">
+          <h3>Open Source Bootcamp</h3>
+          <p>Beginner-friendly bootcamp co-hosted to onboard new contributors.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="fade-in">
+      <h2>Impact So Far</h2>
+      <p>Since the collaboration began, we've seen:</p>
+      <ul class="impact-list">
+        <li><strong>150+</strong> students onboarded into open source</li>
+        <li><strong>40+</strong> successful GSoC proposals</li>
+        <li><strong>10+</strong> joint events hosted across campuses</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Open Source × GSoC Club Collaboration. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>

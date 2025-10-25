@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Events | Open Source × GSoC Club</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #e0fff5;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      color: #00ffd2;
+      border-bottom: 3px solid #00ffd2;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+      letter-spacing: 1px;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 900px;
+      margin: auto;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      animation: fadeInUp 1.2s ease-out;
+    }
+
+    .events-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 3rem 2rem;
+    }
+
+    .event-card {
+      background-color: #1e1e1e;
+      width: 320px;
+      padding: 2rem;
+      border-radius: 15px;
+      transition: transform 0.3s ease, border 0.3s ease;
+      box-shadow: 0 0 10px rgba(0, 255, 210, 0.1);
+    }
+
+    .event-card:hover {
+      transform: translateY(-10px);
+      border: 2px solid #00ffd2;
+    }
+
+    .event-card h2 {
+      color: #00ffd2;
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+    }
+
+    .event-card p {
+      line-height: 1.6;
+      color: #d0fff0;
+      font-size: 1rem;
+      margin: 0.5rem 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Upcoming Events</h1>
+  </header>
+
+  <div class="intro">
+    <p>The <strong>Open Source × GSoC Club</strong> hosts dynamic events that empower students to learn, build, and contribute to open source. Whether you're preparing for GSoC or just starting your journey, our events are designed to help you grow.</p>
+  </div>
+
+  <div class="events-grid">
+    <div class="event-card">
+      <h2 style="text-decoration: underline;">Open Source Hackathon</h2>
+      <br>
+      <div class="hack-img"><img src="https://miro.medium.com/v2/resize:fit:1400/1*tFn5QpJOEVSDFe-Xi3uSwQ.png" height="200px" width="320"></div>
+      <p><strong>Date:</strong> October 20, 2025</p>
+      <p><strong>Time:</strong> 10:00 AM – 6:00 PM</p>
+      <p>Build innovative solutions with fellow developers. Prizes, mentorship, and swag await!</p>
+    </div>
+
+    <div class="event-card">
+      <h2 style="text-decoration: underline;">GSoC Prep Bootcamp</h2>
+      <br>
+      <div class="hack-img"><img src="https://afteracademy.com/images/everything-you-need-to-know-about-gsoc-banner-d71c8c90ebbad336.png" height="200px" width="320"></div>
+      <p><strong>Date:</strong> November 5, 2025</p>
+      <p><strong>Time:</strong> 2:00 PM – 5:00 PM</p>
+      <p>Learn how to apply for GSoC, write proposals, and connect with mentors.</p>
+    </div>
+
+    <div class="event-card">
+      <h2 style="text-decoration: underline;">Open Innovation Showcase</h2>
+      <br>
+       <div class="hack-img"><img src="https://www.inta.org/wp-content/uploads/images/events/open-innovation-challenge/AM23-OIC-logo-lightbulb.png" height="200px" width="320"></div>
+      <p><strong>Date:</strong> December 10, 2025</p>
+      <p><strong>Time:</strong> 4:00 PM – 7:00 PM</p>
+      <p>Present your open source projects and get feedback from industry experts.</p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Open Source × GSoC Club | Events Subpage
+  </footer>
+</body>
+</html>
